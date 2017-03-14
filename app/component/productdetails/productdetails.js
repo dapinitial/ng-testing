@@ -13,7 +13,5 @@ module.exports = {
 
 function ProductDetailsController($log, productService) {
   $log.debug('ProductDetailsController');
-  // $log.log(productService);
-  // $log.log(productService.products);
-  productService.fetchProducts().then(products => this.products = products);
+  $log.log(productService);
 }

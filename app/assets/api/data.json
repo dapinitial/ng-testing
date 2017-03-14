@@ -1,7 +1,10 @@
 {
-  "id": "B007TIE0GQ",
-  "title": "Shark Ninja",
-  "image": "https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg",
-  "subtitle": "Magic Bullet NutriBullet 12-Piece High-Speed Blender/Mixer System",
-  "brand": "Nutribullet"
+  "products":
+    [{
+    "id": "B007TIE0GQ",
+    "title": "Shark Ninja",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg",
+    "subtitle": "Magic Bullet NutriBullet 12-Piece High-Speed Blender/Mixer System",
+    "brand": "Nutribullet"
+  }]
 }

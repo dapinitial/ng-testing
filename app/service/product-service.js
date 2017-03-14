@@ -10,8 +10,8 @@ function productService($q, $log, $http) {
 
   service.fetchProducts = function() {
     $log.debug('productService.fetchProducts()');
-      let url = './app/assets/api/data.json';
-      return $http.get(url, () => {
+    let url = './app/assets/api/product-data.json';
+    return $http.get(url, () => {
     })
     .then( res => {
       $log.log('products retrieved');
