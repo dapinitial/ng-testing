@@ -1,0 +1,6 @@
+header {
+  @include line;
+  background-color: $bg-primary;
+  border-bottom: 1px solid #EAEEF2;
+  padding: $ps;
+}

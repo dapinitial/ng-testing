@@ -1,0 +1,131 @@
+$sm-width: 0px;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 769px;
+
+//
+// canvas {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 11;
+// }
+//
+// .hidden {
+//   display: none;
+// }
+//
+// a:link {
+//   color: #000;
+//   display: block;
+//   transition: .2s linear color;
+// }
+//
+// a:visited {
+//   color: #999;
+// }
+//
+// a:hover {
+//   color: #000;
+//   cursor: pointer;
+//   text-decoration: none;
+//   transition: .2s linear color;
+// }
+//
+// a:focus {
+//   color: #333333;
+// }
+//
+// a:active {
+//   color: #2B8CBF;
+// }
+//
+// .italics {
+//   font-style: italic;
+// }
+//
+// .bold {
+//   font-weight: bold;
+// }
+//
+// .underline {
+//   border-bottom: 1px solid #1a1a1a;
+//   padding-bottom: 8rem;
+// }
+//
+// .emphasis {}
+//
+// .text-right {
+//   text-align: right;
+// }
+
+/** OOCSS helper functions for layout works well, esp with ie6+, perfect for hospitals, government, legacy, abroad
+ */
+
+.line:after,
+.lastUnit:after {
+  clear: both;
+  content: "x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x  ";
+  display: block;
+  font-size: xx-large;
+  height: 0 !important;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.line {
+  *zoom: 1;
+}
+
+.lastUnit {
+  @include lastUnit;
+}
+
+.unit {
+  @include unit;
+}
+
+.unit1of2 {
+  @include unit;
+  width: 50%;
+}
+
+.unit1of3 {
+  @include unit;
+  width: 33.3%;
+}
+
+.unit1of4 {
+  @include unit;
+  width: 25%;
+}
+
+.unit1of5 {
+  @include unit;
+  width: 20%;
+}
+
+.unit1of6 {
+  @include unit;
+  width: 16.67%;
+}
+
+.unit3of4 {
+  @include unit;
+  width: 75%;
+}
+
+.unitRight {
+  @include unitRight;
+}
+
+.left-column {
+  @include unit;
+}
+
+.right-column {
+  @include lastUnit;
+}

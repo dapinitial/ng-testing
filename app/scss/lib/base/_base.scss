@@ -1,0 +1,84 @@
+.hidden {
+  display: none;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.google.com/specimen/Roboto?selection.family=Roboto');
+
+/** Declaring the viewport
+ */
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/** Scroll bars!
+  */
+::-webkit-scrollbar {
+   width: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+	background-color:transparent;
+	box-shadow: none;
+}
+
+/** Selections!
+  */
+::selection {
+  background-color: #000;
+  color: #ccc;
+}
+
+/** Input placeholder!
+  */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  @include fontSmoothing;
+  color: #9d9d9d;
+  font-family: 'Poppins', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #9d9d9d;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #9d9d9d;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #9d9d9d;
+}
+
+/** Base Layer!
+  */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #F5F7F9;
+}

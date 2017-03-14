@@ -1,0 +1,15 @@
+scrollview {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+scrollpanel {
+  @include scrolling;
+  display: block;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 14px;
+  position: relative;
+  width: 100%;
+}
