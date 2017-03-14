@@ -9,8 +9,8 @@ function productService($q, $log, $http) {
   service.products = [];
 
   service.fetchProducts = function() {
-    $log.debug('galleryService.fetchProducts()');
-      let url = './app/assets/api/product-data.json';
+    $log.debug('productService.fetchProducts()');
+      let url = './app/assets/api/data.json';
       return $http.get(url, () => {
     })
     .then( res => {
