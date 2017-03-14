@@ -15,7 +15,6 @@ function productService($q, $log, $http) {
     })
     .then( res => {
       $log.log('products retrieved');
-      $log.log(res);
       service.products = res.data;
       return service.products;
     })

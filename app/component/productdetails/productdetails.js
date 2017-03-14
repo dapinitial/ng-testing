@@ -4,13 +4,16 @@ require('./_productdetails.scss');
 
 module.exports = {
   template: require('./productdetails.html'),
-  controller: ['$log', 'productService', ProductDetailsController],
+  controller: ['$log', '$scope', 'productService', ProductDetailsController],
   controllerAs: 'vm',
   bindings: {
     product: '<'
   }
 };
 
-function ProductDetailsController($log, productService) {
+function ProductDetailsController($log, $scope, productService) {
   $log.debug('ProductDetailsController');
-};
+  $log.log(productService.products);
+  $log.log(productService.products);
+  this.products = productService.products;
+}

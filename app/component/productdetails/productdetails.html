@@ -1,11 +1,10 @@
   <nav>
-    <gallery-item ng-repeat="item in vm.products" product="item"></gallery-item>
     <div>
-    sdfgdsfg  {{ vm.product.name }}
+    sdfgdsfg  {{ vm.productService.product.name }}
     </div>
-    <div>lkjdfsg{{ vm.products.id }}</div>
+    <div>lkjdfsg{{ vm.productService.products.id }}</div>
 
-    <div>fdnsejbr{{ vm.products.image }}</div>
+    <div>fdnsejbr{{ vm.image }}</div>
 
-    <img ng-src="{{ vm.products.image }}" />
+    <img ng-src="{{ vm.image }}" />
   </nav>
