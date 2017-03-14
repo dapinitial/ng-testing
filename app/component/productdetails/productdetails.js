@@ -13,7 +13,7 @@ module.exports = {
 
 function ProductDetailsController($log, $scope, productService) {
   $log.debug('ProductDetailsController');
-  $log.log(productService.products);
+  $log.log(productService);
   $log.log(productService.products);
   this.products = productService.products;
 }
