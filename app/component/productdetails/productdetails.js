@@ -16,4 +16,6 @@ function ProductDetailsController($log, $scope, productService) {
   $log.log(productService);
   $log.log(productService.products);
   this.products = productService.products;
+  productService.fetchProducts().then(products => $scope.products = products);
+
 }
