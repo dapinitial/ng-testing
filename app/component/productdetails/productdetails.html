@@ -1,5 +1,12 @@
-<div>{{ vm.product.name }}</div>
-<div>{{ vm.products.products.name }}</div>
-<productimage>{{ vm.image }}</productimage>
-<productname>{{ vm.product.name }}</productname>
-<productdescription>{{ vm.products.name }}</productdescription>
+<div ng-repeat="product in vm.products">
+  <div>{{ product.title }}</div>
+  <productimage>{{ product.image }}</productimage>
+  <productname>{{ product.brand }}</productname>
+  <productdescription>{{ product.subtitle }}</productdescription>
+  <div ng-repeat="review in product.review">
+    Review Block
+    <div>{{review.customer}}</div>
+    <div>{{review.review}}</div>
+    <div>{{review.score}}</div>
+  </div>
+</div>
