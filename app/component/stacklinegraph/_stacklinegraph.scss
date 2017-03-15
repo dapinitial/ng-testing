@@ -1,0 +1,22 @@
+@import "../../scss/lib/theme/vars";
+@import "../../scss/lib/base/mixins";
+
+stacklinegraphcard {
+  @include line;
+  margin-bottom: 40px;
+}
+
+cardcontents {
+  @include line;
+  display: block;
+}
+
+cardheader {
+  @include line;
+  @include fontSmoothing;
+  display: block;
+  font-family: 'Maven Pro';
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px;
+}

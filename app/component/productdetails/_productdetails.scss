@@ -1,25 +1,114 @@
 @import "../../scss/lib/theme/vars";
+@import "../../scss/lib/base/mixins";
 
-.navbar {
-  img {
-    width: 5.5vw;
-    float: left;
-    margin-top: 1vw;
-    margin-left: 1%;
+productdetails {
+  @include line;
+  display: block;
+}
+
+productimage {
+  @include line;
+  display: block;
+  padding: 24px;
+  text-align: center;
+}
+
+productname {
+  @include fontSmoothing;
+  color: #364054;
+  font-family: 'Maven Pro';
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  line-height: 14px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+productdescription {
+  @include fontSmoothing;
+  border-bottom: 1px solid #F5F7F9;
+  color: #ABB7C5;
+  display: block;
+  font-family: 'Maven Pro';
+  font-size: 16px;
+  line-height: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  h3 {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
   }
+}
 
-  h2 {
-    float: left;
-    font-size: 3vw;
-    color: $white;
-    margin-top: 2.25vw;
-    margin-left: 1vw;
+productfilters {
+  @include line;
+  border-bottom: 1px solid #F5F7F9;
+  display: block;
+  padding: 16px;
+}
+
+filter {
+  @include unit;
+  @include fontSmoothing;
+  background-color: #fff;
+  border: 1px solid #EAECF3;
+  border-radius: 6px;
+  color: #222;
+  cursor: pointer;
+  font-family: 'Maven Pro';
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 7px 16px;
+  text-align: center;
+  &:hover {
+    background-color: #F5F7F9;
   }
+}
 
-  button {
-    float: right;
-    margin-top: 2vw;
-    margin-right: 1%;
-    font-size: 1.5vw;
+productnavigation {
+  @include line;
+  display: block;
+  padding: 40px 60px;
+  .productnavigation-link {
+    @include fontSmoothing;
+    color: #373F4D;
+    display: block;
+    font-family: 'Maven Pro';
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: #9BA6B9;
+    }
+    &.overview {
+      &::before {
+        content: ' ';
+        background: url('../../assets/img/overview-icon.png') no-repeat;
+        position: absolute;
+        left: -30px;
+        top: -5px;
+        height: 24px;
+        transform: scale(.8);
+        width: 24px;
+      }
+    }
+    &.sales {
+      &::before {
+        content: ' ';
+        background: url('../../assets/img/sales-icon.png') no-repeat;
+        position: absolute;
+        left: -30px;
+        top: -5px;
+        height: 24px;
+        transform: scale(.8);
+        width: 24px;
+      }
+    }
   }
 }

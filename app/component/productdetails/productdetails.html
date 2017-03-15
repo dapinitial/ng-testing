@@ -1,12 +1,28 @@
-<div ng-repeat="product in vm.products">
-  <div>{{ product.title }}</div>
-  <productimage>{{ product.image }}</productimage>
-  <productname>{{ product.brand }}</productname>
-  <productdescription>{{ product.subtitle }}</productdescription>
+<card-header class="card-header" ng-repeat="product in vm.products">
+  <productimage>
+    <img ng-src="{{ product.image }}" alt="{{ product.subtitle }}"  height="auto" width="240" />
+  </productimage>
+  <productname>{{ product.title }}</productname>
+  <productdescription><h3>{{ product.subtitle }}</h3></productdescription>
+  <productfilters>
+    <nav ng-repeat="tag in product.tags">
+      <filter>{{ tag }}</filter>
+    </nav>
+  </productfilters>
+  <productnavigation>
+    <ul>
+      <li>
+        <a class="productnavigation-link overview" ng-href="/overview">Overview</a>
+      </li>
+      <li>
+        <a class="productnavigation-link sales"  ng-href="/sales">Sales</a>
+      </li>
+    </ul>
+  </productnavigation>
   <div ng-repeat="review in product.review">
     Review Block
     <div>{{review.customer}}</div>
     <div>{{review.review}}</div>
     <div>{{review.score}}</div>
   </div>
-</div>
+</card-header>

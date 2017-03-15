@@ -3,10 +3,12 @@
 @import "lib/theme/vars";
 @import "lib/base/mixins";
 @import "lib/base/base";
+
 // :::: LAYOUT :::: //
 @import "lib/layout/header";
 @import "lib/layout/footer";
 @import "lib/layout/layout";
+@import "lib/layout/cards";
 @import "lib/layout/scrollviewpanel";
 @import "lib/layout/productdashboardcard";
 @import "lib/layout/stacklinegraphcard";
@@ -17,7 +19,5 @@
 
 // :::: COMPONENT :::: //
 @import "../component/productdetails/productdetails";
-@import "../component/productfilters/productfilters";
-@import "../component/productnavigation/productnavigation";
 @import "../component/stacklinegraph/stacklinegraph";
 @import "../component/stacklinetable/stacklinetable";

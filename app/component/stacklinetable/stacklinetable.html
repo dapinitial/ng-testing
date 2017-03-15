@@ -1,1 +1,41 @@
-<h1>table.</h1>
+<div class="container" ng-repeat="product in vm.products">
+  <form action="">
+    <div class="form-group well">
+      <div class="input-group">
+        <div class="input-group-addon"><span class="fa fa-search"></span></div>
+        <input type="text" class="form-control" ng-model="searchUserTerm" placeholder="Search user..."/>
+      </div>
+    </div>
+  </form>
+  <table class="table table-striped" ng-controller="StacklineTableController"  ng-repeat="sale in product.sales">
+    <thead>
+      <tr>
+        <th>
+          <a href="#" ng-click="sortName = 'firstName'; sortReverse = !sortReverse">Week Ending
+             <span class="fa fa-caret-down" ng-show="!sortReverse"></span>
+             <span class="fa fa-caret-up" ng-show="sortReverse"></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortName = 'lastName'; sortReverse = !sortReverse">Last Name
+             <span class="fa fa-caret-down" ng-show="!sortReverse"></span>
+             <span class="fa fa-caret-up" ng-show="sortReverse"></span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="sortName = 'age'; sortReverse = !sortReverse">Age
+             <span class="fa fa-caret-down" ng-show="!sortReverse"></span>
+             <span class="fa fa-caret-up" ng-show="sortReverse"></span>
+          </a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="sale in product.sales|orderBy:sortName:sortReverse|filter: searchUserTerm">
+        <td ng-bind="sales.weekEnding"></td>
+        <td ng-bind="user.lastName"></td>
+        <td ng-bind="user.age"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

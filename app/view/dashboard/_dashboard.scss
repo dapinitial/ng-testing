@@ -1,6 +1,17 @@
 main {
+
 }
 
 ui-view {
+  bottom: 0;
+  left: 0;
   padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.product-dashboard.right-column {
+  padding-left: 20px;
 }

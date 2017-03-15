@@ -8,30 +8,30 @@ const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 const uiRouter = require('angular-ui-router');
 
-const slackline = angular.module('slackline', [uiRouter]);
+const stackline = angular.module('stackline', [uiRouter]);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( path => {
-  slackline.config(context(path));
+  stackline.config(context(path));
 });
 
 context = require.context('./view/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = pascalcase(path.basename(key, '.js'));
   let module = context(key);
-  slackline.controller(name, module);
+  stackline.controller(name, module);
 });
 
 context = require.context('./service/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  slackline.service(name, module);
+  stackline.service(name, module);
 });
 
 context = require.context('./component/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  slackline.component(name, module);
+  stackline.component(name, module);
 });

@@ -1,5 +1,6 @@
 productdashboardcard {
   @include unit;
   @include card;
-  width: 50vw;
+  height: 100%;
+  max-width: 376px;
 }
